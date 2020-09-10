@@ -28,22 +28,24 @@ const Search = () => {
         <input
           type="text"
           className="form-control"
-          placeholder="Type Book title here"
+          placeholder="Type book title here"
           onKeyPress={handleSearch}
         />
       </div>
       {books.map((book) => (
         <div key={book.id}>
-          {" "}
           <button
             type="button"
             class="btn btn-primary"
             onClick={() => handleSave(book)}
           >
-            Save{" "}
+            Save
           </button>
-          <p>{book.volumeInfo.title}</p>
-          <img src={book.volumeInfo.imageLinks?.thumbnail} />{" "}
+
+          <p> {book.volumeInfo.title}</p>
+          <img src={book.volumeInfo.imageLinks?.thumbnail} />
+          <p> Written by: {book.volumeInfo.authors} </p>
+          <p></p>
         </div>
       ))}
     </div>
