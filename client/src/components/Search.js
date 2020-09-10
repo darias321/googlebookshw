@@ -24,15 +24,11 @@ const Search = () => {
   return (
     <div>
       <div className="input-group flex-nowrap">
-        <div className="input-group-prepend">
-          <span className="input-group-text" id="addon-wrapping">
-            @
-          </span>
-        </div>
+        <div className="input-group-prepend"></div>
         <input
           type="text"
           className="form-control"
-          placeholder="Username"
+          placeholder="Type Book title here"
           onKeyPress={handleSearch}
         />
       </div>
