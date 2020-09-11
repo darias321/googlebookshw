@@ -34,18 +34,24 @@ const Search = () => {
       </div>
       {books.map((book) => (
         <div key={book.id}>
-          <button
-            type="button"
-            class="btn btn-primary"
-            onClick={() => handleSave(book)}
-          >
-            Save
-          </button>
-
-          <p> {book.volumeInfo.title}</p>
           <img src={book.volumeInfo.imageLinks?.thumbnail} />
+          <p> {book.volumeInfo.title}</p>
           <p> Written by: {book.volumeInfo.authors} </p>
-          <p></p>
+          <p> {book.volumeInfo.description} </p>
+          <p>
+            <p>
+              {" "}
+              Click for more info:
+              {book.volumeInfo.previewLink}
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onClick={() => handleSave(book)}
+            >
+              Save
+            </button>
+          </p>
         </div>
       ))}
     </div>
